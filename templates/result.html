@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 600px;
+            margin: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        h2 {
+            color: #007bff;
+        }
+        .output {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+        }
+        .report-box {
+            background: #eef;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <div class="output"><strong>Prediction:</strong> {{ prediction }}</div>
+        <div class="output"><strong>Prediction Probability:</strong> {{ predict_prob }}</div>
+        <h3>Generated Report</h3>
+        <div class="report-box">
+            <pre>{{ report }}</pre>
+        </div>
+
+        <a href="/" class="back-button">New Applicant</a>
+    </div>
+</body>
+</html>

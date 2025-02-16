@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Loan Application Form</h2>
+        <form action="/predict" method="post">
+            <label>Age</label>
+            <input type="number" name="Age" required>
+            
+            <label>Income</label>
+            <input type="number" name="Income" required>
+            
+            <label>Loan Amount</label>
+            <input type="number" name="LoanAmount" required>
+            
+            <label>Credit Score</label>
+            <input type="number" name="CreditScore" required>
+            
+            <label>Months Employed</label>
+            <input type="number" name="MonthsEmployed" required>
+            
+            <label>Num Credit Lines</label>
+            <input type="number" name="NumCreditLines" required>
+            
+            <label>Interest Rate</label>
+            <input type="number" name="InterestRate" required>
+            
+            <label>Loan Term</label>
+            <input type="number" name="LoanTerm" required>
+            
+            <label>DTI Ratio</label>
+            <input type="number" step="0.01" name="DTIRatio" required>
+            
+            <label>Has Mortgage</label>
+            <select name="HasMortgage">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Has Dependents</label>
+            <select name="HasDependents">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Has Co-Signer</label>
+            <select name="HasCoSigner">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Employment Type</label>
+            <select name="EmploymentType">
+                <option value="Part-time">Part-time</option>
+                <option value="Unemployed">Unemployed</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="Full-time">Full-time</option>
+            </select>
+
+            <label>Marital Status</label>
+            <select name="MaritalStatus">
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Single">Single</option>
+            </select>
+
+            <label>Loan Purpose</label>
+            <select name="LoanPurpose">
+                <option value="Business">Business</option>
+                <option value="Home">Home</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+                <option value="Auto">Auto</option>
+            </select>
+
+            <label>Education</label>
+            <select name="Education">
+                <option value="Bachelor's">Bachelor's</option>
+                <option value="High School">High School</option>
+                <option value="Master's">Master's</option>
+                <option value="PhD">PhD</option>
+            </select>
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
