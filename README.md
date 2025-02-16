@@ -64,6 +64,7 @@ python app.py
 
 ## Contributors
 
+- **Kaustubh Vanalkar**
 - **Rushank Wani**
-- **Saurabh Gaikwad**
+
 
